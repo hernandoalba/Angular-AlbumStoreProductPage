@@ -11,11 +11,11 @@ import { ProductListComponent } from './product-list/product-list.component'
     ProductPageComponent,
     ProductDescriptionComponent,
     ProductTracklistingComponent,
-    
     ProductListComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpModule
   ],
   providers: [ProductService],

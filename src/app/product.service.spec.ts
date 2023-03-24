@@ -1,20 +1,25 @@
-import { Observable } from 'rxjs/Observable';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Product } from './product';
+import { ProductListComponent } from './product-list.component';
 
-@Injectable()
-export class ProductService {
+describe('ProductListComponent', () => {
+  let component: ProductListComponent;
+  let fixture: ComponentFixture<ProductListComponent>;
 
-  private _albumUrl = '../assets/album.json';
-  private _productsUrl = '../assets/products.json';
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ ProductListComponent ]
+    })
+    .compileComponents();
+  }));
 
-  constructor(private _http: Http) { }
+  beforeEach(() => {
+    fixture = TestBed.createComponent(ProductListComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-  getAlbum(id: number): Observable<Album> {
-    return this._http.get(this._albumUrl).map((response) => <Album>response.json());
-  }
-
-  getProducts(): Observable<Product[]> {
-    return this._http.get(this._productsUrl).map((response) => <Product[]>response.json());
-  }
-}
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
