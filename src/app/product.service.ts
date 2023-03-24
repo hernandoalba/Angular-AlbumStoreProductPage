@@ -1,10 +1,5 @@
-import { Http, Response } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
-
-import { Album } from './album';
-
-import { Observables } from 'rxjs/Observable'
 
 import { Product } from './product';
 
