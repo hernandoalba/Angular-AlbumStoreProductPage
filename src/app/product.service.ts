@@ -7,8 +7,6 @@ import { Album } from './album';
 
 import { Observable } from 'rxjs/Observable';
 
-import { Observable } from 'rxjs/Observable';
-
 @Injectable()
 export class ProductService {
 
