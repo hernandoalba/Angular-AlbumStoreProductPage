@@ -1,7 +1,10 @@
+import { Album } from './album';
 
 import { Observable } from 'rxjs/Observable';
 
 import { Product } from './product';
+import { Http } from '@angular/http';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ProductService {
